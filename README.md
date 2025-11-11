@@ -1,5 +1,4 @@
 "# picture-convert-to-code-using-gemini-cli" 
-"# picture-convert-to-code-using-gemini-cli" 
 
 After giving this prompt, the Gemini CLI has made this.
 
