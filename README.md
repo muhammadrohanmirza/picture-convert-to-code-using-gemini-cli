@@ -1,6 +1,7 @@
 "# picture-convert-to-code-using-gemini-cli" 
 "# picture-convert-to-code-using-gemini-cli" 
 
+After giving this prompt, the Gemini CLI has made this.
 
 Convert the uploaded image into a fully responsive HTML and CSS landing page hero section that looks exactly like the 
 Canva design shown. The page should include a top navigation bar with the “Canva” logo text on the left, navigation 
