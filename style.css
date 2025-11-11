@@ -1,0 +1,248 @@
+/* --- General Styles & Variables --- */
+:root {
+    --purple: #8b4cf8;
+    --cyan: #00c4cc;
+    --white: #ffffff;
+    --text-light: #f0f0f0;
+    --primary-btn-bg: #ffffff;
+    --primary-btn-text: #1a1a1a;
+    --secondary-btn-bg: rgba(255, 255, 255, 0.15);
+    --secondary-btn-text: #ffffff;
+    --hover-opacity: 0.85;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    color: var(--white);
+    background: linear-gradient(to bottom, var(--purple), var(--cyan));
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: opacity 0.3s ease;
+}
+
+a:hover {
+    opacity: var(--hover-opacity);
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* --- Header and Navigation --- */
+.main-header {
+    padding: 20px 40px;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.nav-center {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 500;
+    text-align: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-login {
+    background-color: transparent;
+}
+
+.btn-signup {
+    background-color: var(--primary-btn-bg);
+    color: var(--primary-btn-text);
+}
+
+.btn-signup:hover {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.hamburger .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: var(--white);
+    transition: all 0.3s ease-in-out;
+}
+
+/* --- Hero Section --- */
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 20px;
+    min-height: calc(100vh - 150px); /* Adjust based on header height */
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero-heading {
+    font-size: 4.5rem;
+    font-weight: 700;
+    margin: 0 0 20px;
+    line-height: 1.2;
+}
+
+.hero-subheading {
+    font-size: 1.25rem;
+    max-width: 600px;
+    margin: 0 auto 40px;
+    color: var(--text-light);
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.btn-primary {
+    background-color: var(--primary-btn-bg);
+    color: var(--primary-btn-text);
+    font-size: 1.1rem;
+    padding: 15px 30px;
+}
+
+.btn-secondary {
+    background-color: var(--secondary-btn-bg);
+    color: var(--secondary-btn-text);
+    font-size: 1.1rem;
+    padding: 15px 30px;
+    border: 1px solid transparent; /* Prevents layout shift on hover */
+}
+
+.btn-primary:hover, .btn-secondary:hover {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+.btn-secondary:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+
+/* --- Responsive Design (Tablet) --- */
+@media (max-width: 1024px) {
+    .nav-center {
+        display: none; /* Hide nav links in the center */
+    }
+
+    .hamburger {
+        display: block; /* Show hamburger menu */
+    }
+    
+    .main-nav {
+        justify-content: space-between;
+    }
+
+    .nav-right {
+        padding-right: 20px;
+    }
+
+    .nav-left {
+        flex-grow: 1;
+    }
+
+    .hero-heading {
+        font-size: 3.5rem;
+    }
+
+    .hero-subheading {
+        font-size: 1.1rem;
+    }
+}
+
+/* --- Responsive Design (Mobile) --- */
+@media (max-width: 600px) {
+    .main-header {
+        padding: 15px 20px;
+    }
+
+    .nav-right {
+        gap: 10px;
+        padding-right: 20px;
+    }
+
+    .btn {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+
+    .hero-section {
+        padding: 40px 20px;
+        min-height: calc(100vh - 100px);
+    }
+
+    .hero-heading {
+        font-size: 2.5rem;
+    }
+
+    .hero-subheading {
+        font-size: 1rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .btn-primary, .btn-secondary {
+        width: 100%;
+        box-sizing: border-box; /* Ensure padding doesn't break width */
+    }
+}
